@@ -1,0 +1,233 @@
+<?php
+include '../connect/dbconfig.php';
+
+include '../session/staff_session.php';
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Cik Muda</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../css/shop-homepage.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">LS CIK MUDA</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="col-lg-12">
+
+    <div class="row">
+
+      <div class="col-3" style="background-color: gray; "> 
+
+        <nav class="navbar-dark">
+          <br><br>
+          <div style="text-align:center;">
+            <img src="../icon/usericon.png" alt="Avatar" style="text-align:center; width:100px; background-color:white; border-radius: 50%;" align="middle">
+          </div>
+          <div id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="../staff/appointment.php">Appointment Menu</a>
+                <li  class="nav-item "><a class="nav-link" href="../staff/listapp.php"> &nbsp;  &nbsp;  &nbsp;  &nbsp;List Appointment</a></li>
+
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="../staff/listorder.php">Order Menu</a>
+                <ul class="navbar-nav ml-auto">
+                  <li  class="nav-item "><a class="nav-link" href="../staff/listorder.php"> &nbsp;  &nbsp;  &nbsp;  &nbsp;List Order</a></li>
+                  <li  class="nav-item "><a class="nav-link" href="../staff/addorder.php"> &nbsp;  &nbsp;  &nbsp;  &nbsp;Add Order</a></li>
+                </ul>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="../staff/listproduct.php">Product Menu</a>
+                <ul class="navbar-nav ml-auto">
+                  <li  class="nav-item"><a class="nav-link" href="../staff/listproduct.php"> &nbsp;  &nbsp;  &nbsp;  &nbsp;List Product</a></li>
+                  <li  class="nav-item"><a class="nav-link" href="../staff/addproduct.php"> &nbsp;  &nbsp;  &nbsp;  &nbsp;Add Product</a></li>
+                </ul>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="../staff/listpromotion.php">Promotion Menu</a>
+                <ul class="navbar-nav ml-auto">
+                  <li  class="nav-item"><a class="nav-link" href="../staff/listpromotion.php"> &nbsp;  &nbsp;  &nbsp;  &nbsp;List Promotion</a></li>
+                  <li  class="nav-item"><a class="nav-link" href="../staff/addpromotion.php"> &nbsp;  &nbsp;  &nbsp;  &nbsp;Add Promotion</a></li>
+                  <br><br><br><br>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="col-9" style="background-color: white; text-align: center;">
+        <div class="container">
+          <br><br>
+          <div class="row col-lg-12">
+            <div class="col-lg-3"><a href="../staff/staffhome.php"><-Back Home</a></div><div class="col-lg-9"><h4>Appointment</h4></div><div class="col-lg-3" style="text-align:right"><!-- <button type="button" class="btn btn-warning"  data-toggle="modal" data-target="#myModal">Add Staff</button> --></div>
+
+          </div>
+          <br>
+
+          <form class="form-horizontal" method="post">            <!-- Text input-->
+            <div class="row">
+
+
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <input id="name" name="name" type="text" placeholder="NAME" class="form-control input-md">
+              </div>
+              <div class="col-md-2"></div>
+            </div>
+
+            <div class="row"><br></div>
+
+            <div class="row">
+
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <textarea name="detail" rows="10" cols="60" style="overflow-y: scroll;">Detail . . . </textarea>
+              </div>
+              <div class="col-md-2"></div>
+            </div>
+
+            <div class="row"><br></div>
+
+            <div class="row">
+
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <input id="date" name="date" type="date" placeholder="DATE" class="form-control input-md">
+              </div>
+              <div class="col-md-2"></div>
+            </div>
+
+            <div class="row"><br></div>
+
+            <div class="row">
+
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <input id="time" name="time" type="time" placeholder="TIME" class="form-control input-md">
+              </div>
+              <div class="col-md-2"></div>
+            </div>
+            <div class="row"><br></div>
+
+            <div class="row"><br></div>
+            <div class="row"><br></div>
+
+
+
+
+            <div class="row">
+
+              <div class="col-md-4"></div>
+              <div class="col-md-4">
+                <button name="add" class="btn btn-warning" type="submit" >Add </button>
+              </div>
+              <div class="col-md-4"></div>
+            </div>
+
+
+
+
+
+          </form>
+
+          <br><br>
+        </div>
+        <div class="container">
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; LS CIK MUDA FROZEN website</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/popper/popper.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script>
+    function myFunction() {
+      alert("Update");
+    }
+  </script>
+
+</body>
+
+</html>
+
+<?php
+
+
+if(isset($_POST['add']))
+{
+  $name = $_POST['name'];
+  $detail = $_POST['detail'];
+  $date = $_POST['date'];
+  $time = $_POST['time'];
+
+
+  if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+  }
+
+
+  $sql = "INSERT INTO appointment (`name`, `detail`, `date`, `time`, `status`)
+  VALUES ('".$name."', '".$detail."', '".$date."', '".$time."', '1')";
+
+  if (mysqli_query($conn, $sql)) {
+    ?>
+    <script type="text/javascript">
+      alert("Data has been added");
+    </script>
+    <?php
+  } else {
+    ?>
+    <script type="text/javascript">
+      alert("Error");
+    </script>
+    <?php
+  }
+
+  mysqli_close($conn);
+
+}
+
+
+?>
